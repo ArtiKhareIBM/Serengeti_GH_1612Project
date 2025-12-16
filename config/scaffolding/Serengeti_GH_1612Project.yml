@@ -8,7 +8,23 @@ packages:
   gitUsername: ArtiKhareIBM
   gitBranch: main
 - name: AzRepoMultiplyPackage
+  version: "1.0"
   gitServerName: srcCtrl_AzRepos_Arti
   gitUrl: https://dev.azure.com/ArtiKhare/AzRepoMultiplyPackage/_git
   gitUsername: ArtiKhare
   gitBranch: main
+services:
+- serviceName: project.serengeti_gh_1612.integrations:azrepoPackage
+  packages:
+  - name: Serengeti_GH_1612Project
+    version: "1.0"
+  - name: AzRepoMultiplyPackage
+    version: "1.0"
+- serviceName: AzRepoMultiplyPackage:multiplyFS
+  packages:
+  - name: AzRepoMultiplyPackage
+    version: "1.0"
+- serviceName: pub.math:multiplyInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2070
